@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        input{
+            background-color: violet;
+            color: blue;
+            border-radius: 5px;
+
+        }
+
+        button{
+            background-color: crimson;
+            color: navy;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 3px;
+        }
+
+    </style>
+</head>
+<body style="margin: 2rem;">
+    <input type="number" id="inpSayi1">
+    <input type="number" id="inpSayi2">
+    <button onclick="topla()" type="button">Topla</button>
+    <p id="pSonuc"></p>
+
+    <script>
+
+        function topla(){
+              let inpSayi1El= document.querySelector("#inpSayi1");
+              let inpSayi2El= document.querySelector("#inpSayi2");
+              let sonucEl= document.querySelector("#pSonuc");
+
+             let sonuc= Number(inpSayi1El.value) + Number(inpSayi2El.value)
+             console.log(sonuc, typeof(sonuc))
+
+             sonucEl.innerText=`Bu islemin sonucu: ${sonuc}`
+
+             inpSayi1El.value="";
+             inpSayi2El.value="";
+
+
+        }
+
+     
+
+
+    </script>
+    
+</body>
+</html>

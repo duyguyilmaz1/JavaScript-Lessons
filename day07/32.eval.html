@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eval</title>
+</head>
+<body>
+    <!--- çok tercih edilmiyor ama hesap mak. yaparken vs. yardımcı olur. String ifadeleri number a çeviriyor-->
+
+    <input type="text" id="inp">
+    <button onclick="hesapla()">Hesapla</button>
+
+    <script>
+
+        function hesapla(){
+            let inpEl=document.querySelector("#inp")
+            let number=inpEl.value
+
+            let sonuc=eval(number)
+            document.querySelector(".result").innerHTML=`işleminizin sonucu : ${sonuc}`
+        } 
+
+    </script>
+    
+</body>
+
+</html>

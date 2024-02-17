@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+
+    <input type="number"  id="inp" placeholder="Indirim miktarını giriniz:"> 
+    <button onclick="indirimYap()">Indirim Uygula</button>
+
+    <ul class="list">
+        <li>Notebook <span>1500</span>$</li>
+        <li>Tablet  <span>700</span>$</li>
+        <li>Telefon <span>1200</span>$</li>
+        <li>Bilgisayar <span>1510</span>$</li>
+        <li>Televizyon <span>2900</span>$</li>
+        <li>Kulaklık <span>150</span>$</li>
+        <li>Radio <span>15</span>$</li>
+    </ul>
+
+    <script>
+
+        function indirimYap(){
+            let inputEl=document.querySelector("#inp");
+            let indirimOrani=Number(inputEl.value);
+
+            let listEl=document.querySelectorAll(".list li span");
+            for( let i=0; i<listEl.length; i++){
+                 //     console.log(listEl[i]);
+                // length-1 ile arrayin son elemanına gideriz.
+
+                let fiyatlar= listEl[i].innerText
+                fiyatlar=(fiyatlar*indirimOrani/100)
+                listEl[i].innerText=fiyatlar
+
+       
+            }
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

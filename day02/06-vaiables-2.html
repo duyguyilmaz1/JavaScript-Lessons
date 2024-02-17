@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables 2</title>
+</head>
+<body>
+
+    <script>
+
+        let name="Duygu";
+        console.log(name, typeof(name) , isNaN(name));
+
+        var num=123;
+        console.log(num, typeof num)
+
+        const bigNumber=1236n;
+       // console.log(bigNumber , typeof(bigNumber) , isNaN(bigNumber))
+
+        let esitMi= false;
+        console.log(esitMi , typeof(esitMi) , isNaN(esitMi))
+
+        let symbol1=Symbol();
+      //  console.log(symbol1 , typeof(symbol1) , isNaN(symbol1))
+
+        var surName;
+        console.log(surName, typeof(surName) , isNaN(surName)) //burada bir değer atamadığımız için colsole.log undefined olarak çıkar.
+
+        let isim= null;
+        console.log(isim, typeof(isim) , isNaN(isim)) // colsole.log da çıktı object olur burada. 
+
+        let arr=["ali","veli","can"];
+        console.log(arr , typeof(arr) , isNaN(arr)) //console.logda data türü object çıkar
+
+        const obj={
+            name:"ali",
+            surname:"veli",
+            age:23
+        };
+        console.log(obj , typeof(obj) , isNaN(obj)) // data türü burada da object dir.  
+
+        let bolme=34/0;
+        console.log(bolme , typeof(bolme) , isNaN(bolme)) // console.log cıktısı : Infinity ve typeof: number
+
+        // isNaN fonksiyonu ile verilen değer NaN (Not a Number) değerini kontrol edebilirsiniz. 
+        // NaN, bir sayı olmayan bir değişken gibi davranır.
+
+       
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

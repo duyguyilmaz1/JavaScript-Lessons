@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakamlar Toplamı</title>
+</head>
+<body>
+    <script>
+        let sayi=123;
+        let birlerBas=0;
+        let rakamlarTop=0;
+
+        birlerBas=sayi%10;
+        rakamlarTop+=birlerBas;
+        sayi/=10;
+
+        birlerBas=sayi%10;
+        rakamlarTop+=birlerBas;
+        sayi/=10;
+
+        birlerBas=sayi%10;
+        rakamlarTop+=birlerBas;
+        sayi/=10;
+
+        console.log(rakamlarTop);
+        console.log(Math.floor(rakamlarTop)); // küsurattan kurtulmak için Math.floor kullanılır, Math.floor aşağıya yuvarlama yapar
+
+        //Math.ceil de yuvarlama yapar ama yukarıya yuvarlar. 
+
+        const dil="javascript";
+        console.log(Number(dil)); // çıktı NaN
+        console.log(Number("123abc")) // çıktı NaN
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

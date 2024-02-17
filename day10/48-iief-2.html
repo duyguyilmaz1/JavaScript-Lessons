@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE - 2</title>
+</head>
+
+<body>
+
+    <script>
+        ((name) => {
+            let days = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+            // console.log(days);
+
+            let today = new Date(); // new Date bugünü verir.
+            let message = `Merhaba ${name}! Bugün günlerden ${days[today.getDay()]}, sayfama hoşgeldiniz...`;
+            alert(message);
+
+        })("Duygu");
+
+        let day= new Date();
+        console.log(day.getDay());
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+
+    <script>
+        let numbers = [12, 56, 14, 67, 89, 33, 22, 35, 89, 9];
+
+        const getMaxNumber = (arr) => {
+
+            // burada metoda gelen parametrenin array olup olmadıgını ve de boş bir array olup olmadığını kontrol ediyoruz:
+            if(!Array.isArray(arr) || arr.length<=0){
+                return;
+            }
+
+            let maxNumber = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+
+                if (arr[i] > maxNumber) {
+                    maxNumber = arr[i];
+                }
+            }
+            return maxNumber;
+        }
+        let maximumNumber= getMaxNumber(numbers);
+        console.log(maximumNumber); // 89
+
+        let x=34;
+
+        console.log(Array.isArray(numbers)) // true
+        console.log(Array.isArray(x)) // false
+       
+    </script>
+
+</body>
+
+</html>

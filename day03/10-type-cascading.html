@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Cascading</title>
+</head>
+<body>
+    <script>
+        let age="335";
+        console.log(age , typeof(age)); // 33 string
+        age=Number(age , typeof(age));
+        console.log(age , typeof(age)); // 33 number
+
+        let yas=33;
+        console.log(yas , typeof(yas)) // 33 'number'
+        yas=String(yas);
+        console.log(yas , typeof(yas)) // 33 string
+
+        let result="123kdleif"
+        console.log(result , typeof(result)) // 123kdleif string
+        result=Number(result);
+        console.log(result , typeof(result)) // NaN --> string ifade number a dönüşmez. 
+
+        let x=3;
+        let y=-7;
+        let z=null;
+
+        x=Boolean(x);
+        console.log(x) //true
+        y=Boolean(y);
+        console.log(y) // true
+        z=Boolean(z);
+        console.log(z) // false --> null, 0, " ", undefined, NaN bize false çıktı verir. 
+                      // bunların dışındakiler true değeri döner. 
+     
+        let deger1=prompt("1.sayıyı giriniz:");
+        let deger2=prompt("2.sayıyı giriniz:");
+
+        console.log(deger1 , typeof(deger1)) // 1 string : rakam girmemize ragmen string çıktı döndü. 
+
+        deger1=parseInt(deger1);
+        deger2=parseInt(deger2);
+        console.log(deger1, typeof(deger1)) // parseInt ile number a çevirmiş olduk. kullanıcıdan alınan değer hep String dönüyor.ParseInt kullanılmalı.
+        console.log(deger2, typeof(deger2))
+        console.log(deger1+deger2)
+
+        //parseFloat ise String ifadeyi ondalıklı sayıya çevirir. 
+
+        
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

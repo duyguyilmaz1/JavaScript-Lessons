@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model-2</title>
+
+    <style>
+        .stil-1{
+            background-color: aqua;
+            color: crimson;
+            font-size: 3rem;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stil-2{
+            background-color: green;
+            color: orangered;
+            font-size: 3rem;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="title">Hello DOM</h1>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestiae obcaecati, autem veniam reprehenderit earum
+        dolore nostrum, error quisquam, molestias fugit! Possimus, esse. Quam sint doloribus quasi excepturi, ut
+        perferendis!</p>
+
+    <script>
+
+        //document.querySelector(".title").innerText=` Selam` --> böyle de bir kullanımı var
+
+       let h1El= document.querySelector(".title")
+    //    h1El.style.color="red" // bu şekilde şekillendirme yapılır fakat bu yöntem zahmetlidir.
+    //    h1El.style.textAlign="center";
+    //    h1El.style.backgroundColor="blue";
+
+    h1El.classList.add("stil-1")
+    h1El.classList.remove("stil-1")
+
+
+
+
+    </script>
+
+</body>
+
+</html>

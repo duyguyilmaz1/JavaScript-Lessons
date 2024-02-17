@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Circuit</title>
+</head>
+<body style="margin: 3rem;">
+
+    <input type="number"  id="inp" placeholder="Lütfen 0 ile 100 arasında bir sayı giriniz">
+    <button onclick="showResult()">Show Result</button>
+
+
+    <script>
+
+        function showResult(){
+          let inputEl= document.getElementById("inp");
+          let inputValue= Number(inputEl.value);
+
+        //  let result= 
+        //(inputValue<0 || inputValue>100) && alert("Lütfen 0 ile 100 arasında bir sayı giriniz");
+
+            let result= (inputValue>0 && inputValue<100) || alert("Lütfen 0 ile 100 arasında bir sayı giriniz")
+        }
+
+
+    </script> 
+    
+</body>
+</html>

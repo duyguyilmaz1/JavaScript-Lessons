@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>increment -decrement</title>
+</head>
+<body>
+    <script>
+         let a=3;
+    let b=++a;
+    let c=--a;
+    console.log(a,b,c) /// 3, 4, 3
+
+    a+=5;
+    console.log(a); // 8
+
+    //post-increment :  
+    let x=10;
+    console.log(x);
+    let y=x++; // post-increment var, önce değer atanır yani y=10 olur, daha sonra x'in değer arttırılır
+    console.log(y); // 10
+    console.log(x) // 11
+    let z=y++;
+    console.log(z); // 10
+    console.log(y); // 11
+    y++;
+    console.log(y); // 12
+    let j= z--;
+    console.log(j); // 10
+    console.log(z); // 9
+
+    //pre-decrement:
+
+    z=--j;
+    console.log(z); // 9
+    console.log(j); // 9
+    z+=3;
+    console.log(z); // 12
+
+     const d=3;
+     let k=d++;
+     console.log(k) // HATA , const un değeri arttırılamaz, sabittir.
+
+     
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
