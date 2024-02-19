@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dom-3</title>
+    </head>
+    <body>
+        <p id="text">
+            Lorem ipsum dolor
+            <span style="color: brown; font-size: 1.5rem;display: none;"
+                >i love javascript.</span
+            >
+            lit. Dolores, odio! Blanditiis, repudiandae!
+        </p>
+        <script>
+            //innerHTML
+            let textEl = document.getElementById("text");
+            console.log(textEl.innerHTML);
+            //innerText
+            console.log(textEl.innerText);
+            //textContent gizlenmiş yazıları da gösterir
+            console.log( textEl.textContent)
+        </script>
+    </body>
+</html>
