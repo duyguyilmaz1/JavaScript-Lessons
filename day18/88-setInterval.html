@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+
+<body>
+
+    <button id="btnStart">Start</button>
+    <label id="lblDisplay">0</label>
+    <button id="btnStop">Stop</button>
+
+    <script>
+        const btnStart = document.getElementById("btnStart");
+        const btnStop = document.getElementById("btnStop");
+        const lblDisplay = document.getElementById("lblDisplay");
+        let interval = null;
+
+        btnStart.addEventListener("click", () => {
+            console.log(interval)
+            if (interval) return;
+            interval = setInterval(() => {
+                lblDisplay.textContent = Number(lblDisplay.textContent) + 1;
+            }, 1000);
+        })
+
+        btnStop.addEventListener("click", () => {
+            if (!interval) return;
+            clearInterval(interval)
+            interval = null;
+        })
+
+    </script>
+
+</body>
+
+</html>
