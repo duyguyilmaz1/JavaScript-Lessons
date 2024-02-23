@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="clock"></h1>
+
+    <script>
+
+      let clockEl = document.getElementById("clock"); //h1
+      let currentDate = new Date();
+      let currentHours = currentDate.getHours();
+      let currentMinutes = currentDate.getMinutes();
+      let currentSeconds = currentDate.getSeconds();
+  
+      window.addEventListener("DOMContentLoaded", function () {
+        displayCurentClock();
+        setInterval(displayCurentClock, 1000);
+      });
+  
+      const displayCurentClock = () => {
+        currentSeconds++;
+
+        if (currentSeconds >= 60) {
+          currentSeconds = 0;
+          currentMinutes++;
+          if (currentMinutes >= 60) {
+            currentMinutes = 0;
+            currentHours++;
+            if (currentHours >= 24) {
+              currentHours = 0;
+            }
+          }
+        }
+        clockEl.textContent = `${currentHours}:${currentMinutes}:${currentSeconds}`;
+      }; 
+      </script>
+</body>
+</html>

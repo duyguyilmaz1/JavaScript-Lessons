@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="digi-clock"></div>
+
+    <script>
+
+        const showClock = () => {
+            const date = new Date();
+            const hour = date.getHours();
+            const minute = date.getMinutes();
+            const second= date.getSeconds();
+
+            const digiclock = document.getElementById("digi-clock");
+
+            digiclock.innerHTML = `${hour}:${minute}:${second}`;
+        }
+        
+        setInterval(showClock, 1000);
+
+        showClock();
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

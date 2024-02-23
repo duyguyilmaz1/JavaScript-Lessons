@@ -1,4 +1,4 @@
-import {countries} from "../data/countries.js" ;
+import {countries} from "../../day19/data/countries.js" ;
 
 const search=document.getElementById("search");
 const countrylist=document.getElementById("countrylist");
