@@ -1,0 +1,122 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+@use "./common";
+
+.weather-card {
+	background-color: v.$color1;
+	color: v.$color4;
+	overflow: hidden;
+	@include m.border-radius(20px);
+
+	@media (min-width: 900px) {
+		@include m.flexbox();
+	}
+
+	.panel-start {
+		background-image: v.$card-bg-img;
+		background-size: cover;
+		background-position: center center;
+		padding: 20px;
+		position: relative;
+
+		@include m.flexbox($ai: center);
+		@include m.border-radius(20px);
+
+		&::before {
+			content: "";
+			@include m.fligran(v.$color3);
+			z-index: 0;
+		}
+
+		> * {
+			position: relative;
+			z-index: 1;
+		}
+
+		h2,
+		h4,
+		h5 {
+			margin: 0;
+			@include m.shadow(text, 0 0 3px v.$color5)
+		}
+
+		.date {
+			h2 {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
+			h4 {
+				font-size: 0.7rem;
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		.temp {
+			text-align: right;
+			h2 {
+				font-size: 3rem;
+			}
+
+			@media (min-width: 900px) {
+				text-align: left;
+			}
+		}
+
+		@media (min-width: 900px) {
+			flex: 1;
+			@include m.flexbox($fd: column, $ai: start, $gap: 40px);
+		}
+	}
+
+	.panel-end {
+		@include m.flexbox($fd: column, $gap: 20px);
+		padding: 20px;
+
+		ul {
+			@include m.reset-list;
+		}
+
+		.status {
+			li {
+				@include m.flexbox();
+
+				line-height: 1.5rem;
+			}
+		}
+
+		.days {
+			@include m.flexbox();
+
+			li {
+				@include m.flexbox($fd: column, $ai:center, $gap: 5px);
+				@include m.border-radius(20px);
+				padding: 15px;
+
+
+				span {
+					&:first-child {
+						font-size: 2.3rem;
+					}
+					&:nth-child(2) {
+						font-size: 0.7rem;
+					}
+				}
+
+
+				&.active{
+					background-color: v.$color4;
+					color: v.$color5;
+				}
+			}
+		}
+
+		.btn-change {
+			@extend .btn;
+			font-size: 1.05rem;
+		}
+
+		@media (min-width: 900px) {
+			flex: 3;
+		}
+	}
+}
